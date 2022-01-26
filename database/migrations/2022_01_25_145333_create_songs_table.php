@@ -17,10 +17,10 @@ class CreateSongsTable extends Migration
 
             $table->id();
 
-            $table->string('title');
-            $table->string('lastname');
-            $table->string('linguage');
-            $table->date('minutes');
+            $table->string('title', 60);
+            $table->string('linguage', 30);
+            $table->text('lyric') -> nullable();
+            $table->integer('duration');
 
 
             $table->timestamps();
